@@ -1,5 +1,5 @@
 # TechThing
-Random Group Project
+Virtual trading simulator
 
 # Structure
 Project is divided into the following parts:
