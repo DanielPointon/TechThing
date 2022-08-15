@@ -1,2 +1,1 @@
-let () =
-    print_endline "Hello Ocaml!"
+let () = print_endline "Hello, World!"
