@@ -1,2 +1,2 @@
 let () =
-    print_endline "Hello Ocaml!"
+    print_endline "trololol"
