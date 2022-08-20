@@ -3,7 +3,7 @@ services:
     backend_ocaml:
         build:
             context: ./backend/ocaml
-        command: echo 'Backend Started'
+        command: tail -f /dev/null
         depends_on:
             - "backend_database"  
         volumes:
@@ -13,13 +13,19 @@ services:
     backend_database:
         build:
             context: ./backend/database
-        hostname: db
+        hostname: doc
         ports:
             - "3006:3006"  
+    backend_python:
+        build:
+            context: ./backend/python
+        command: tail -f /dev/null
+        volumes:
+            - ./backend/python/:/usr/app
     frontend:
         build:
             context: ./frontend/
-        command: echo 'Frontend Started'
+        command: tail -f /dev/null
         volumes:
             - ./frontend/:/usr/app
         ports:
