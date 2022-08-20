@@ -13,6 +13,8 @@ services:
     backend_database:
         build:
             context: ./backend/database
+        hostname:
+            database
         ports:
             - "3006:3006"  
     frontend:
