@@ -1,15 +1,5 @@
 version: '3'
 services:
-    backend_go:
-        build:
-            context: ./backend/go
-        command: echo 'Backend Started'
-        depends_on:
-            - "backend_database"  
-        volumes:
-            - ./backend/go:/usr/app
-        ports:
-            - "3002:3002"
     backend_ocaml:
         build:
             context: ./backend/ocaml
@@ -23,7 +13,6 @@ services:
     backend_database:
         build:
             context: ./backend/database
-        command: echo 'Database Started'
         ports:
             - "3006:3006"  
     frontend:
