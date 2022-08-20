@@ -1,1 +1,1 @@
-FROM ocaml/opaml:latest
+FROM ocaml/opam:latest
